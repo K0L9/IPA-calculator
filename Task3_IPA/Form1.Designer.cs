@@ -39,6 +39,7 @@
             label6 = new Label();
             label7 = new Label();
             send_button1 = new Button();
+            unitLabel = new Label();
             SuspendLayout();
             // 
             // size_TB
@@ -94,18 +95,16 @@
             drink_result.AutoSize = true;
             drink_result.Location = new Point(326, 63);
             drink_result.Name = "drink_result";
-            drink_result.Size = new Size(36, 15);
+            drink_result.Size = new Size(0, 15);
             drink_result.TabIndex = 6;
-            drink_result.Text = "result";
             // 
             // spirit_result
             // 
             spirit_result.AutoSize = true;
             spirit_result.Location = new Point(326, 122);
             spirit_result.Name = "spirit_result";
-            spirit_result.Size = new Size(36, 15);
+            spirit_result.Size = new Size(0, 15);
             spirit_result.TabIndex = 7;
-            spirit_result.Text = "result";
             // 
             // label6
             // 
@@ -133,12 +132,23 @@
             send_button1.TabIndex = 10;
             send_button1.Text = "send";
             send_button1.UseVisualStyleBackColor = true;
+            send_button1.Click += send_button1_Click;
+            // 
+            // unitLabel
+            // 
+            unitLabel.AutoSize = true;
+            unitLabel.Location = new Point(153, 63);
+            unitLabel.Name = "unitLabel";
+            unitLabel.Size = new Size(21, 15);
+            unitLabel.TabIndex = 11;
+            unitLabel.Text = "ml";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(483, 229);
+            Controls.Add(unitLabel);
             Controls.Add(send_button1);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -151,7 +161,7 @@
             Controls.Add(percentage_TB);
             Controls.Add(size_TB);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Alcohol calculation service";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +179,6 @@
         private Label label6;
         private Label label7;
         private Button send_button1;
+        private Label unitLabel;
     }
 }

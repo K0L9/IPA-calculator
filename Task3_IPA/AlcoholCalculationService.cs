@@ -11,11 +11,11 @@
         }
         public static double CalculateAlcoCount(double value, int vesselCount, double alcoProcent)
         {
-            if (alcoProcent < 0 && alcoProcent > 100) throw new ArgumentOutOfRangeException("Procent must be in 0 - 100");
+            if (alcoProcent < 0 || alcoProcent > 100) throw new ArgumentOutOfRangeException("Procent must be in 0 - 100");
             try
             {
                 double totalValue = CalculateTotalValue(value, vesselCount);
-                return totalValue / (alcoProcent * 100);
+                return (totalValue * alcoProcent) / 100;
             }
             catch (Exception) { throw; }
         }
